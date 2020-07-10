@@ -1,0 +1,77 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100;
+  background-color: $background-4;
+  &__container {
+    height: 3.5rem;
+  }
+}
+.name {
+  color: $color-4;
+  font-weight: 600;
+  letter-spacing: 0.28px;
+  font-size: 1.5rem;
+  span::first-letter {
+    color: $color-letter;
+  }
+  span {
+    display: inline-block;
+  }
+}
+.menu-desktop {
+  height: 100%;
+  // padding: 0;
+  @include breakpoint-down(md) {
+    position: fixed;
+    // z-index: 100;
+    top: 3.5rem;
+    width: 100%;
+    left: 0;
+    background-color: rgba(29, 29, 29, 0.95);
+    transform: translateX(100%);
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &.open {
+    @include breakpoint-down(md) {
+      transform: translateX(0%);
+    }
+  }
+  ul {
+    padding: 0;
+  }
+  &__item:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+  &__link {
+    color: $color-4;
+    letter-spacing: 0.28px;
+    font-size: 1.3rem;
+    transition: color 200ms ease-in-out;
+  }
+  &__link:hover {
+    color: $color-letter;
+    // color: orange;
+  }
+}
+.btn-hamburger {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  cursor: pointer;
+}
+// esto es para el estilo movil
+@include breakpoint-down(md) {
+  .menu-mobile {
+    flex-direction: column;
+    .menu-desktop__item {
+      margin: 0;
+      padding-left: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

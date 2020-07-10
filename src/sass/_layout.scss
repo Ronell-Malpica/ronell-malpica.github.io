@@ -1,0 +1,31 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint-down(xl) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.flex {
+  display: flex;
+}
+.flex-ai-center {
+  align-items: center;
+}
+.flex-jc-spacebetween {
+  justify-content: space-between;
+}
+.l-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  // grid-template-columns: 1fr;
+  // @include breakpoint-up(sm) {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+  // @include breakpoint-up(lg) {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  // }
+}

@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  // min-height: calc(100vh - 3.5rem);
+  min-height: 100vh;
+  background-color: lightblue;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  // border: 1px solid red;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.mg-left-1 {
+  margin-left: 1rem;
+}
+// clases para ocultar  cosas con los mixin de media queries
+.hide-for-mobile {
+  @include breakpoint-down(md) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(md) {
+    display: none;
+  }
+}
+.container-img {
+  background-color: lightskyblue;
+  position: relative;
+  padding-bottom: 56.25%;
+}

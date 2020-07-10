@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixin";
+@import "globals";
+@import "button";
+@import "layout";
+@import "header";
+@import "hero";
+@import "projects";
+
+.no_scroll {
+  overflow: hidden;
+}

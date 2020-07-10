@@ -1,0 +1,43 @@
+$breakpoints-up: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+$breakpoints-down: (
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px,
+);
+//mixins de los size para arriba
+@mixin breakpoint-up($size) {
+  $breakpoint-value: map-get($breakpoints-up, $size);
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+// ahora de los mixin para abajo
+@mixin breakpoint-down($size) {
+  $breakpoint-value: map-get($breakpoints-down, $size);
+  @media screen and( max-width:$breakpoint-value) {
+    @content;
+  }
+}
+body {
+  @include breakpoint-down(sm) {
+    background-color: red;
+  }
+  @include breakpoint-up(sm) {
+    background-color: tomato;
+  }
+  @include breakpoint-up(md) {
+    background-color: greenyellow;
+  }
+  @include breakpoint-up(lg) {
+    background-color: yellow;
+  }
+  @include breakpoint-up(xl) {
+    background-color: black;
+  }
+}

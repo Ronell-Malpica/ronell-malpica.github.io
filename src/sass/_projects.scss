@@ -1,0 +1,88 @@
+.main {
+  background-color: $background-4;
+  background-color: $color-4;
+  background-color: $background-1;
+  background-color: rgb(241, 248, 255);
+  color: $background-4;
+  color: #444;
+}
+
+.projects {
+  // border: 1px solid yellow;
+  // padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  &__title {
+    // border: 1px solid cyan;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    // margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+.project-personal {
+  // border: 1px solid orange;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  // min-height: 100%;
+  background-color: white;
+  h3 {
+    margin: 0;
+    padding: 0;
+    // border: 1px solid red;
+  }
+
+  &__text {
+    padding: 1.5rem;
+    background-color: white;
+    color: $background-5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 1.3rem;
+    h3 {
+      margin: 0;
+      padding: 0;
+      // border: 1px solid red;
+    }
+  }
+  &__description {
+    // border: 1px solid tomato;
+    font-size: 1.1rem;
+    flex: 1; /* make p grow to fill available space*/
+    line-height: 1.4;
+  }
+  &__technology {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 1.2rem;
+    }
+    ul {
+      // border: 1px solid red;
+      padding: 0;
+    }
+    li::before {
+      content: "-";
+      // border: 1px solid lime;
+      padding-right: 0.3rem;
+      color: $background-5;
+    }
+  }
+}
+h4 {
+  margin: 0;
+}
+.container-code {
+  align-self: flex-end;
+  // border: 1px solid red;
+  display: flex;
+}
