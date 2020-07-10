@@ -20,19 +20,35 @@
 
   &__title {
     @include breakpoint-down(md) {
+      // border: 1px solid white;
+      line-height: 1.4;
+      max-width: 400px;
       text-align: center;
+      // font-size: 1.8rem;
+    }
+    @include breakpoint-up(md) {
+      font-size: 2rem;
+    }
+    @include breakpoint-up(lg) {
+      font-size: 3rem;
     }
   }
 }
 .user-img {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
   $tamanio: 200px;
   height: $tamanio;
   width: $tamanio;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
+  @include breakpoint-up(md) {
+    $tamanio: 300px;
+    height: $tamanio;
+    width: $tamanio;
+  }
   img {
     position: absolute;
     top: 0;
@@ -40,5 +56,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+.cta {
+  display: flex;
+  margin-top: 4rem;
+  @include breakpoint-down(md) {
+    text-align: center;
+    justify-content: center;
   }
 }

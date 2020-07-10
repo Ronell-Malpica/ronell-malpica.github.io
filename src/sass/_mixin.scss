@@ -24,20 +24,3 @@ $breakpoints-down: (
     @content;
   }
 }
-body {
-  @include breakpoint-down(sm) {
-    background-color: red;
-  }
-  @include breakpoint-up(sm) {
-    background-color: tomato;
-  }
-  @include breakpoint-up(md) {
-    background-color: greenyellow;
-  }
-  @include breakpoint-up(lg) {
-    background-color: yellow;
-  }
-  @include breakpoint-up(xl) {
-    background-color: black;
-  }
-}

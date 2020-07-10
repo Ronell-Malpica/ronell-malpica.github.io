@@ -1,33 +1,3 @@
-@media screen and (max-width: 575.98px) {
-  body {
-    background-color: red;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  body {
-    background-color: tomato;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    background-color: greenyellow;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  body {
-    background-color: yellow;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  body {
-    background-color: black;
-  }
-}
-
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -42,7 +12,6 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: lightblue;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -79,6 +48,18 @@ ul {
   padding-bottom: 56.25%;
 }
 
+.container-img img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .btn {
   border: 2px solid black;
   background-color: white;
@@ -94,27 +75,64 @@ ul {
 
 .preview {
   border-color: #1d1d1d;
-  color: #1d1d1d;
+  background-color: #1d1d1d;
+  color: white;
   margin-right: 5px;
 }
 
 .preview:hover {
-  background-color: #1d1d1d;
-  color: white;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.preview:active {
+  border-color: #08fdd8;
 }
 
 .code {
   border-color: #1d1d1d;
-  color: #1d1d1d;
-}
-
-.code:hover {
   background-color: #1d1d1d;
   color: white;
 }
 
+.code:hover {
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.code:active {
+  border-color: #08fdd8;
+}
+
+.github {
+  border-color: #1d1d1d;
+  border-color: white;
+  background-color: #1d1d1d;
+  color: #08fdd8;
+  color: white;
+  letter-spacing: 0.5px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+.github:hover {
+  color: #08fdd8;
+  border-color: #08fdd8;
+}
+
 .container {
-  border: 1px solid lime;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -158,13 +176,31 @@ ul {
   }
 }
 
-.l-hero__img-user {
-  border: 1px solid red;
+@media screen and (min-width: 768px) {
+  .l-hero__description {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/ 2;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
   .l-hero__img-user {
     margin-bottom: -100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .l-hero__img-user {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
   }
 }
 
@@ -194,6 +230,20 @@ ul {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 1.5rem;
+}
+
+.l-about {
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .l-about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+  }
 }
 
 .header {
@@ -273,8 +323,19 @@ ul {
 .btn-hamburger {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(20%, white), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, white), color-stop(60%, white), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(60%, white), to(white));
+  background-image: linear-gradient(white, white 20%, transparent 20%, transparent 40%, white 40%, white 60%, transparent 60%, transparent 80%, white 60%, white 100%);
   cursor: pointer;
+}
+
+.btn-hamburger:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#08fdd8), color-stop(20%, #08fdd8), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #08fdd8), color-stop(60%, #08fdd8), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(60%, #08fdd8), to(#08fdd8));
+  background-image: linear-gradient(#08fdd8, #08fdd8 20%, transparent 20%, transparent 40%, #08fdd8 40%, #08fdd8 60%, transparent 60%, transparent 80%, #08fdd8 60%, #08fdd8 100%);
+}
+
+.btn-hamburger.active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#08fdd8), color-stop(20%, #08fdd8), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #08fdd8), color-stop(60%, #08fdd8), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(60%, #08fdd8), to(#08fdd8));
+  background-image: linear-gradient(#08fdd8, #08fdd8 20%, transparent 20%, transparent 40%, #08fdd8 40%, #08fdd8 60%, transparent 60%, transparent 80%, #08fdd8 60%, #08fdd8 100%);
 }
 
 @media screen and (max-width: 767.98px) {
@@ -315,18 +376,40 @@ ul {
 
 @media screen and (max-width: 767.98px) {
   .hero__title {
+    line-height: 1.4;
+    max-width: 400px;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero__title {
+    font-size: 3rem;
   }
 }
 
 .user-img {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
   height: 200px;
   width: 200px;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .user-img {
+    height: 300px;
+    width: 300px;
+  }
 }
 
 .user-img img {
@@ -339,10 +422,23 @@ ul {
      object-fit: cover;
 }
 
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 767.98px) {
+  .cta {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .main {
-  background-color: #181818;
-  background-color: #909096;
-  background-color: #444;
   background-color: #f1f8ff;
   color: #181818;
   color: #444;
@@ -355,7 +451,13 @@ ul {
 .projects__title {
   padding-bottom: 1rem;
   padding-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__title {
+    font-size: 1.5rem;
+  }
 }
 
 .project-personal {
@@ -399,6 +501,7 @@ ul {
 
 .project-personal__title {
   font-size: 1.3rem;
+  color: #444;
 }
 
 .project-personal__title h3 {
@@ -407,12 +510,13 @@ ul {
 }
 
 .project-personal__description {
-  font-size: 1.1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   /* make p grow to fill available space*/
+  font-size: 1.1rem;
   line-height: 1.4;
+  color: #9698a6;
 }
 
 .project-personal__technology {
@@ -426,6 +530,7 @@ ul {
 
 .project-personal__technology h4 {
   font-size: 1.2rem;
+  color: #444;
 }
 
 .project-personal__technology ul {
@@ -448,6 +553,82 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.about {
+  color: #1d1d1d;
+  background-color: #f1f8ff;
+}
+
+.about__title {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1d1d1d), to(#08fdd8));
+  background-image: linear-gradient(to right, #1d1d1d, #08fdd8);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.about__title h2 {
+  margin: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.about__sub-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.about__p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #9698a6;
+  color: #444;
+}
+
+.stack {
+  color: #444;
+  list-style: initial;
+}
+
+.stack__item {
+  margin-bottom: 0.2rem;
+  font-size: 1.3rem;
+}
+
+.contact {
+  color: #444;
+  background-color: #f1f8ff;
+}
+
+.contact__title {
+  background-color: #1d1d1d;
+}
+
+@media screen and (max-width: 767.98px) {
+  .contact__title {
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+}
+
+.contact__title h2 {
+  color: white;
+  margin: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact__content {
+  background-color: #444;
+}
+
+.contact .cta {
+  margin-top: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .no_scroll {

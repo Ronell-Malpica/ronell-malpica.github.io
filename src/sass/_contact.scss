@@ -1,0 +1,26 @@
+.contact {
+  color: #444;
+  background-color: rgb(241, 248, 255);
+  &__title {
+    background-color: $background-5;
+    @include breakpoint-down(md) {
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    h2 {
+      color: white;
+      margin: 0;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  &__content {
+    background-color: #444;
+  }
+  .cta {
+    margin-top: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

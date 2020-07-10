@@ -1,5 +1,5 @@
 .container {
-  border: 1px solid lime;
+  // border: 1px solid lime;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -25,16 +25,24 @@
   }
   //description
   &__description {
-    // border: 1px solid orange;
     @include breakpoint-down(md) {
       padding-bottom: 1.5rem;
       // margin-top: 1.5rem;
     }
+    @include breakpoint-up(md) {
+      // height: 300px;
+      grid-column: 1 / 3; // cambiar esto 1/2 con la imagen
+      grid-row: 1/ 2;
+    }
   }
   &__img-user {
-    border: 1px solid red;
+    // border: 1px solid red;
     @include breakpoint-down(md) {
       margin-bottom: -100px;
+    }
+    @include breakpoint-up(md) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
     }
   }
 }
@@ -53,4 +61,13 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: auto;
   grid-gap: 1.5rem;
+}
+// ABOUT
+.l-about {
+  padding-bottom: 1.5rem;
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+  }
 }

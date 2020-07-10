@@ -14,18 +14,44 @@
 }
 .preview {
   border-color: $background-5;
-  color: $background-5;
+  background-color: $background-5;
+  color: white;
   margin-right: 5px;
 }
 .preview:hover {
-  background-color: $background-5;
-  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.preview:active {
+  border-color: $color-letter;
 }
 .code {
   border-color: $background-5;
-  color: $background-5;
-}
-.code:hover {
   background-color: $background-5;
   color: white;
+}
+.code:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.code:active {
+  border-color: $color-letter;
+}
+.github {
+  border-color: $background-5;
+  border-color: white;
+  background-color: $background-5;
+  color: $color-letter;
+  color: white;
+  letter-spacing: 0.5px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.github:hover {
+  color: $color-letter;
+  border-color: $color-letter;
 }

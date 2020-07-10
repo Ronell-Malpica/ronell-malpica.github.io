@@ -7,9 +7,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  // min-height: calc(100vh - 3.5rem);
   min-height: 100vh;
-  background-color: lightblue;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -40,4 +38,14 @@ ul {
   background-color: lightskyblue;
   position: relative;
   padding-bottom: 56.25%;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
 }

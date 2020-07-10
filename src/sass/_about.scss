@@ -1,0 +1,35 @@
+.about {
+  color: $background-5;
+  background-color: rgb(241, 248, 255);
+  &__title {
+    background-image: linear-gradient(to right, $background-5, $color-letter);
+    color: white;
+    font-size: 1.5rem;
+    h2 {
+      margin: 0;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  &__sub-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+  }
+  &__p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: rgb(150, 152, 166);
+    color: #444;
+  }
+}
+.stack {
+  // border: 1px solid red;
+  color: #444;
+  list-style: initial;
+  &__item {
+    margin-bottom: 0.2rem;
+    font-size: 1.3rem;
+  }
+}

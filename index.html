@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ronell Malpica</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="./static/css/style.css" />
   </head>
   <body>
@@ -15,13 +19,13 @@
         <nav class="menu menu-desktop" id="menu">
           <ul class="flex menu-mobile">
             <li class="menu-desktop__item">
-              <a class="menu-desktop__link" href="#">Proyectos</a>
+              <a class="menu-desktop__link" href="#projects">Proyectos</a>
             </li>
             <li class="menu-desktop__item">
-              <a class="menu-desktop__link" href="#">Acerca de mi</a>
+              <a class="menu-desktop__link" href="#about">Acerca de mi</a>
             </li>
             <li class="menu-desktop__item">
-              <a class="menu-desktop__link" href="#">Contacto</a>
+              <a class="menu-desktop__link" href="#contact">Contacto</a>
             </li>
             <li class="menu-desktop__item">
               <a class="menu-desktop__link" href="#">CV</a>
@@ -36,36 +40,65 @@
         <div class="l-hero">
           <div class="l-hero__img-user">
             <div class="user-img">
-              <img src="./static/img/github1.jpg" alt="" />
+              <!-- <img src="./static/img/github1.jpg" alt="" /> -->
             </div>
           </div>
           <div class="l-hero__description">
             <h1 class="hero__title">
-              Hi, <br class="hide-for-mobile" />
-              I'm Ronell <br class="hide-for-mobile" />
-              web developer
+              Hola, <br class="hide-for-mobile" />
+              soy Ronell <br class="hide-for-mobile" />
+              Desarrollador Frontend
             </h1>
+            <div class="cta">
+              <a
+                href="https://github.com/Ronell-Malpica"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://twitter.com/ronell97m"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/ronell_malpica/"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ronell-malpica-6654071a6/"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i></
+              ></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <main class="main">
+    <main class="main" id="projects" >
       <div class="container">
         <section class="projects">
-          <div class="projects__title"><h2>Proyectos Personales</h2></div>
-          <div class="l-projects">
+          <div class="projects__title">
+            <h2 >Proyectos Personales</h2></div>
+          <div class="l-projects" >
             <div class="project-personal">
-              <div class="container-img"></div>
+              <div class="container-img">
+                <img src="https://camo.githubusercontent.com/788a620dce9b75e1a97c0d9496f14bc958b05155/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647a32303973366a6b2f696d6167652f75706c6f61642f76313538333432373637312f4368616c6c656e6765732f79657a7431663536636670326e6a6e616b70626f2e6a7067" alt="">
+              </div>
               <div class="project-personal__text">
-                <div class="proyect-personal__title">
+                <div class="project-personal__title">
                   <h3>easybank</h3>
                 </div>
                 <p class="project-personal__description">
-                  realizando maquetado de un diseno de Frontend Mentor.
+                  Realizando maquetado de un diseño de Frontend Mentor.
                 </p>
                 <div class="project-personal__technology">
                   <div>
-                    <h4>tecnologias</h4>
+                    <h4>tecnologías:</h4>
                     <ul>
                       <li>HTML</li>
                       <li>CSS</li>
@@ -74,20 +107,22 @@
                     </ul>
                   </div>
                   <div class="container-code">
-                    <a class="btn preview">preview</a>
-                    <a href="#" class="btn code">code </a>
+                    <a  target="_blank" href="https://ronell-malpica.github.io/frontend-mentor-easybank/" class="btn preview">preview</a>
+                    <a  target="_blank" href="https://github.com/Ronell-Malpica/frontend-mentor-easybank" class="btn code">code </a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="project-personal">
-              <div class="container-img"></div>
+              <div class="container-img">
+                <img src="https://camo.githubusercontent.com/ff0b67efdb0bb33602c5a7c0197b82fdb16bdf18/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647a32303973366a6b2f696d6167652f75706c6f61642f76313538353834303934382f4368616c6c656e6765732f667464766b6c62746e36793779646a786a6a756a2e6a7067" alt="">
+              </div>
               <div class="project-personal__text">
-                <div class="proyect-personal__title">
-                  <h3>easybank</h3>
+                <div class="project-personal__title">
+                  <h3>Dark mode</h3>
                 </div>
                 <p class="project-personal__description">
-                  realizando maquetado de un diseno de Frontend Mentor.
+                  Realizando maquetado de un diseño de Frontend Mentor aplicando un modo nocturno.
                 </p>
                 <div class="project-personal__technology">
                   <div>
@@ -100,22 +135,23 @@
                     </ul>
                   </div>
                   <div class="container-code">
-                    <a class="btn preview">preview</a>
-                    <a href="#" class="btn code">code </a>
+                    <a target="_blank"   href="https://ronell-malpica.github.io/dark-mode/"    class="btn preview">preview</a>
+                    <a target="_blank"href="https://github.com/Ronell-Malpica/dark-mode" class="btn code">code </a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="project-personal">
-              <div class="container-img"></div>
+              <div class="container-img">
+                <img src="https://camo.githubusercontent.com/40374ef4af8fc371fbdc70fb33380915fe353c06/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647a32303973366a6b2f696d6167652f75706c6f61642f76313535343338303235332f4368616c6c656e6765732f776e3370747467366e7767796d6f6432697178792e6a7067" alt="huddle">
+              </div>
               <div class="project-personal__text">
-                <div class="proyect-personal__title">
-                  <h3>easybank</h3>
+                <div class="project-personal__title">
+                  <h3>Huddle</h3>
                 </div>
                 <p class="project-personal__description">
-                  realizando maquetado de un diseno de Frontenddsaf asdf Mentor.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
-                  officiis!
+                  Realizando maquetado de un diseño de Frontend  Mentor aplicando responsive desing. 
+                  
                 </p>
                 <div class="project-personal__technology">
                   <div>
@@ -128,24 +164,26 @@
                     </ul>
                   </div>
                   <div class="container-code">
-                    <a class="btn preview">preview</a>
-                    <a href="#" class="btn code">code </a>
+                    <a target="_blank" href="https://ronell-malpica.github.io/frontend-mentor-huddle/" class="btn preview">preview</a>
+                    <a  target="_blank" href="https://github.com/Ronell-Malpica/frontend-mentor-huddle" class="btn code">code </a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="project-personal">
-              <div class="container-img"></div>
+              <div class="container-img">
+                <img src="https://repository-images.githubusercontent.com/246825506/32c7a780-a3a8-11ea-9198-c1a0276e9afe" alt="">
+              </div>
               <div class="project-personal__text">
-                <div class="proyect-personal__title">
-                  <h3>easybank</h3>
+                <div class="project-personal__title">
+                  <h3>To do list</h3>
                 </div>
                 <p class="project-personal__description">
-                  realizando maquetado de un diseno de Frontend Mentor.
+                  Ejemplo de un to do list que funcione con el Local Storage  del navegador.
                 </p>
                 <div class="project-personal__technology">
                   <div>
-                    <h4>tecnologias</h4>
+                    <h4>Tecnologias:</h4>
                     <ul>
                       <li>HTML</li>
                       <li>CSS</li>
@@ -154,8 +192,8 @@
                     </ul>
                   </div>
                   <div class="container-code">
-                    <a class="btn preview">preview</a>
-                    <a href="#" class="btn code">code </a>
+                    <a target="_blank" href="https://ronell-malpica.github.io/to-do-list/" class="btn preview"   >preview</a>
+                    <a target="_blank" href="https://github.com/Ronell-Malpica/to-do-list" class="btn code">code </a>
                   </div>
                 </div>
               </div>
@@ -164,6 +202,75 @@
         </section>
       </div>
     </main>
+    <section class="about">
+      <div class="about__title">
+        <div class="container">
+          <h2 id="about">Acerca de mi</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="l-about">
+            <div class="l-about-description">
+
+              <p class="about__sub-title">Quien soy?</p>
+              <p class="about__p">Soy un desarrollador  establecido en  Peru , en cual esta interesado en la tecnologías web  especialmente en el  desarrollo del frontend. </p>
+              <p class="about__p">
+                El cual mejoro mis habilidades frontend  de forma autodidacta   con libros, videos y plataformas en linea .
+              </p>
+            </div>
+                <div class="l-about-habilidades">
+  
+                  <p class="about__sub-title"> Habilidades web:</p>
+                  <ul class="stack">
+                    <li class="stack__item">HTML</li>
+                    <li class="stack__item">CSS</li>
+                    <li class="stack__item">JavaScript</li>
+                    <li class="stack__item">Sass</li>
+                    <li class="stack__item">Git</li>
+                  </ul>
+                </div>
+          
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact__title">
+        <div class="container">
+          <h2>Contacto</h2>
+        </div>
+      </div>
+      <div class="contact__content">
+       <div  class="container">
+         <div class="cta">
+              <a
+                href="https://github.com/Ronell-Malpica"
+                class="btn github"
+                target="_blank"
+                >
+                <i class="fab fa-github"></i>
+            </a>
+              <a
+                href="https://twitter.com/ronell97m"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/ronell_malpica/"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ronell-malpica-6654071a6/"
+                class="btn github"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i></
+              ></a>
+            </div>
+       </div>
+      </div>
+    </section>
     <script src="./static/js/script.js"></script>
   </body>
 </html>

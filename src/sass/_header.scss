@@ -58,8 +58,50 @@
 .btn-hamburger {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: white;
+  // background-color: white;
+  $color: white;
+  background-image: linear-gradient(
+    $color,
+    $color 20%,
+    transparent 20%,
+    transparent 40%,
+    $color 40%,
+    $color 60%,
+    transparent 60%,
+    transparent 80%,
+    $color 60%,
+    $color 100%
+  );
   cursor: pointer;
+  &:hover {
+    $color: $color-letter;
+    background-image: linear-gradient(
+      $color,
+      $color 20%,
+      transparent 20%,
+      transparent 40%,
+      $color 40%,
+      $color 60%,
+      transparent 60%,
+      transparent 80%,
+      $color 60%,
+      $color 100%
+    );
+  }
+  &.active {
+    background-image: linear-gradient(
+      $color,
+      $color 20%,
+      transparent 20%,
+      transparent 40%,
+      $color 40%,
+      $color 60%,
+      transparent 60%,
+      transparent 80%,
+      $color 60%,
+      $color 100%
+    );
+  }
 }
 // esto es para el estilo movil
 @include breakpoint-down(md) {
