@@ -1,4 +1,5 @@
 .container {
+  border: 1px solid lime;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -7,6 +8,37 @@
     padding-right: 1.5rem;
   }
 }
+//=======| HERO |=========
+.l-hero {
+  // border: 1px solid red;
+  position: relative; //esto es necesario
+  height: 500px;
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  @include breakpoint-up(md) {
+    // background-color: red;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+  //description
+  &__description {
+    // border: 1px solid orange;
+    @include breakpoint-down(md) {
+      padding-bottom: 1.5rem;
+      // margin-top: 1.5rem;
+    }
+  }
+  &__img-user {
+    border: 1px solid red;
+    @include breakpoint-down(md) {
+      margin-bottom: -100px;
+    }
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -21,11 +53,4 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: auto;
   grid-gap: 1.5rem;
-  // grid-template-columns: 1fr;
-  // @include breakpoint-up(sm) {
-  //   grid-template-columns: 1fr 1fr;
-  // }
-  // @include breakpoint-up(lg) {
-  //   grid-template-columns: 1fr 1fr 1fr;
-  // }
 }
